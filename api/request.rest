@@ -1,0 +1,129 @@
+# Kelas
+###
+POST http://localhost:5000/kelas
+Content-Type: application/json
+
+{
+    "kelas": "XII",
+    "jurusan": "Rekayasa Perangkat Lunak"
+}
+
+###
+GET http://localhost:5000/kelas
+###
+GET http://localhost:5000/kelas/1
+###
+DELETE  http://localhost:5000/kelas/1
+
+# Spp
+###
+POST http://localhost:5000/spp
+Content-Type: application/json
+
+{
+    "tahunAjaran": "2020-2023",
+    "nominal": 300000
+}
+
+###
+GET http://localhost:5000/spp
+
+
+
+# Siswa
+###
+POST http://localhost:5000/siswa
+Content-Type: application/json
+
+{
+    "nisn": 238812383,
+    "id_kelas": 1,
+    "id_spp": 1,
+    "nama": "Raju Yadera",
+    "nis": 8347583,
+    "alamat": "Gunung Putri",
+    "no_telp": "083899790773"
+}
+###
+GET http://localhost:5000/siswa
+###
+GET http://localhost:5000/siswa/238812383
+###
+DELETE  http://localhost:5000/siswa/1
+
+
+
+# Admin
+###
+POST http://localhost:5000/admin
+Content-Type: application/json
+
+{
+    "email": "petugas@gmail.com",
+    "username": "petugas",
+    "password": "petugas",
+    "confPassword": "petugas",
+    "role": "petugas"
+}
+
+###
+GET http://localhost:5000/admin
+###
+DELETE http://localhost:5000/admin/4
+
+
+#Payment
+###
+POST http://localhost:5000/payment
+Content-Type: application/json
+
+{
+    "id_siswa": 2,
+    "id_admin": 1,
+    "jumlah_bayar": 300000,
+    "bulan_bayar": "maret",
+    "tahun_bayar": "2023"
+}
+
+###
+GET http://localhost:5000/payment
+###
+GET http://localhost:5000/payment/1
+###
+###
+GET http://localhost:5000/payment/238812383
+###
+DELETE  http://localhost:5000/payment/4
+
+
+
+
+
+# Login Admin
+###
+POST http://localhost:5000/loginadmin
+Content-Type: application/json
+
+{
+    "email": "admin@gmail.com",
+    "password": "admin"
+}
+
+###
+GET  http://localhost:5000/meadmin
+
+# Login Siswa
+###
+POST http://localhost:5000/loginsiswa
+Content-Type: application/json
+
+{
+    "nisn": 238812383,
+    "nis": 8347583
+}
+
+###
+GET  http://localhost:5000/mesiswa
+
+###
+DELETE http://localhost:5000/logout
